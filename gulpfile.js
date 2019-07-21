@@ -13,12 +13,10 @@ var cleanCSS = require('gulp-clean-css')
 var uglify = require('gulp-uglify')
 var del = require('del')
 
-   const cssFiless = [
-        './dev/css/style.css',
-        './dev/css/style2.css'];
+   const cssFiless = ['./dev/css/style.css'];
  function styles(){
   return gulp.src(cssFiless)
-    .pipe(concat('styles.css'))
+    .pipe(concat('styles.min.css'))
     .pipe(postcss([cssImport, cssvars, nested, autoprefixer]) )
     .pipe(cleanCSS({level:2}))
     .pipe(gulp.dest("./build/style"))
