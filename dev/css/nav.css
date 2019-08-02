@@ -1,0 +1,53 @@
+.nav_main {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  .nav_main a, p {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .nav_main a:hover {
+    color: #f1f1f1;
+  }
+  .nav_main .close_btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+#open_nav_btn{
+  font-size: 35px;
+  color: #818181;
+  position: fixed;
+  margin-left: 25px;
+  margin-top: 25px;
+  transition: 10.3s;
+
+}
+#open_nav_btn:hover{
+  color: #5e5b5b;
+}
+.hidden{
+  display: none;
+  transition: 0.3s;
+}
+
+
+
+  @media screen and (max-height: 450px) {
+    .nav_main {padding-top: 15px;}
+    .nav_main a {font-size: 18px;}
+  }

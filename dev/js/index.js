@@ -1,20 +1,32 @@
-
-const text ={
-    data: "",
-    loadDoc: function() {
-        
+import Ar from './libraries/AryJs.js';
 
 
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-              if (this.readyState == 4 && this.status == 200) {
-                text.data =
-                this.responseText;
-              }
-            };
-            xhttp.open("GET", "ajax_info.txt", true);
-            xhttp.send(); 
-    },
+
+var html =``;
+
+function openNav() {
+  document.getElementById("nav").style.width = "250px";
+  document.getElementById("root").style.marginLeft = "250px";
+  document.getElementById("open_nav_btn").classList.toggle("hidden");
 }
+function closeNav() {
+  document.getElementById("nav").style.width = "0";
+  document.getElementById("root").style.marginLeft = "0";
+  document.getElementById("open_nav_btn").classList.toggle("hidden");
+} 
+function move() {
+  document.getElementById("l").style.right = "50%";
+  document.getElementById("c").style.right = "25%";
+  document.getElementById("r").style.right = "75%";
+} 
+
+(function start(){
+ // Ar.showhtml(html,"root");
+  document.getElementById("open_nav_btn").addEventListener("click", openNav); 
+  document.getElementById("close_nav_btn").addEventListener("click", closeNav);
+  document.getElementById("cv_btn").addEventListener("click", move);
+})();
+
+
 
 
