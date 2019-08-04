@@ -19,9 +19,9 @@
 
     <div id="root" class="main">
         <div class="head ">
-            <span id="open_nav_btn"><i class="fas fa-atlas"></i></span>
+            <span id="open_nav_btn"><i class="fas fa-atlas"></i><h1>AR</h1></span>
             <div class="intro">
-              <h1>You yoy yo</h1>
+
               <p id="intro_text">Hi, I am Arina, and I am here to help you with all your IT needs.</p>
             </div>
           </div>
@@ -45,10 +45,48 @@
             </div>    
           </div>
           <div class="row skills">
-            <div class="skills_left col-lg">
-              <div id="l" class="block_l"><img src="/pic/1.jpg"></div>
-              <div id="c" class="block_c"><img src="/pic/1.jpg"></div>
-              <div id="r" class="block_r"><img src="/pic/1.jpg"></div>
+            <div id="skills" class="carousel slide col-lg" data-ride="carousel">
+
+              <!-- Indicators -->
+              <ul class="carousel-indicators">
+                <li data-target="#skills" data-slide-to="0" class="active"></li>
+                <li data-target="#skills" data-slide-to="1"></li>
+                <li data-target="#skills" data-slide-to="2"></li>
+                <li data-target="#skills" data-slide-to="3"></li>
+                <li data-target="#skills" data-slide-to="4"></li>
+                <li data-target="#skills" data-slide-to="5"></li>
+              </ul>
+            
+              <!-- The slideshow -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./pic/html.png" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img src="./pic/css.png" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img src="./pic/js.png" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img src="./pic/csharp.png" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img src="./pic/php.png" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img src="./pic/React.png" alt="">
+                </div>
+              </div>
+            
+              <!-- Left and right controls -->
+              <a class="carousel-control-prev" href="#skills" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#skills" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+            
             </div>
             
             <div class="skills_right col-lg">
@@ -67,12 +105,43 @@
       <a href="#">My skills</a>
       <a href="#">Contact</a>
     </div>
+    <div class="projects">
+      <div class="project">
+        <p>HTML</p>
+      </div>
+      <div class="project">
+        <p>CSS</p>
+      </div>
+      <div class="project">
+        <p>JS</p>
+      </div>
+      <div class="project">
+        <p>PHP</p>
+      </div>
+    </div>
+
+    <div class="contacts">
+      <div class="mail">
+        <h1>Contact me:</h1>
+        <h2>Shepel1992@mail.ru</h2>
+        <p>t.58298988</p>
+      </div>
+      <h1>Social media:</h1>  
+    <div class="social">
+      <div id="f" class="social_l"><img src="/pic/vk.png"></div>
+      <div id="vk" class="social_l"><img src="/pic/f.png"></div>
+    </div>
+
+  </div>
 
 
 
 
 
     <script src="./js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

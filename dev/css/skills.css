@@ -1,51 +1,36 @@
 .skills{
 margin: 0px;
 }
-.skills_left{
-height: 450px;
-/* display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center; */
+.carousel{
+    width: 100%;
+}
+.carousel-inner{
+    margin-left: 20%;
+    margin-right: 20%;
+    max-width: 60%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.carousel-item{
+    border: 6px solid lightblue;
+}
+.carousel-item img{
+    max-width: 300px;
+    width: 25%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
 }
+
 .skills_right{
-
+    padding: 0px;
+    margin: 15px;
+    height: 300px;
 }
-.block_l img{
-position: absolute;
-left: 12%;
-margin: 10% 0px 0px 0px;
-max-width: 17%;
-background-color: red;
-transition: right 4s;
-display: block;
-}
-.block_c img{
-display: block;
-position: absolute;
-left: 37%;
-right: 400px;
-margin: 5% 0px 0px 0px;
-max-width: 26%;
-background-color: azure;
-transition: right 4s;
-}
-.block_r img{
-position: absolute;
-left: 71%;
-right: 200px;
-display: block;
-margin: 10% 0px 10px 0px;
-max-width: 17%;
-background-color: azure;
-transition: right 4s;
-}
-
 
 @media only screen and (max-width: 500px) {
-    .skills_left{
-        height: 250px;
 
-        }
   }

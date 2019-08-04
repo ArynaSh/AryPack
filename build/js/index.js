@@ -106,11 +106,7 @@ function closeNav() {
   document.getElementById("open_nav_btn").classList.toggle("hidden");
 }
 
-function move() {
-  document.getElementById("l").style.right = "50%";
-  document.getElementById("c").style.right = "25%";
-  document.getElementById("r").style.right = "75%";
-}
+function move() {}
 
 (function start() {
   // Ar.showhtml(html,"root");

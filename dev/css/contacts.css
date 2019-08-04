@@ -1,0 +1,44 @@
+.contacts{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.social{
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+}
+.social_l{
+    display: inline;
+    margin: 5px;
+}
+
+.social img{
+    width: 25px;
+}
+.contacts h1{
+    width: 100%;
+    text-align: center;
+    font-size: 1.1em;
+}
+.mail{
+    width: 80%;
+    border-bottom: 1px solid;
+    text-align: center;
+    margin: 0 10% 10px 10%;
+}
+.mail h2{
+    text-decoration: underline;
+    font-size: 1em;
+}
+.mail h2:hover{
+    color: #3C90B0;
+}
+.mail p{
+    padding: 0px;
+    font-size: 1em;
+    color: blue;
+
+}
