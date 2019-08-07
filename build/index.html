@@ -3,6 +3,7 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Armata|Open+Sans+Condensed:300|Press+Start+2P|Special+Elite&display=swap" rel="stylesheet">  
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
       <link rel="stylesheet" href="/style/styles.min.css">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -14,40 +15,42 @@
 
   <body>
     <header>
-
+        <div id="nav" class="nav_main">
+            <p id="close_nav_btn" class="close_btn"><i class="fas fa-angle-double-left"></i></p>
+            <a href="#">About</a>
+            <a href="#">My projects</a>
+            <a href="#skills">My skills</a>
+            <a href="#">Contact</a>
+          </div>
     </header>
 
     <div id="root" class="main">
-        <div class="head ">
-            <span id="open_nav_btn"><i class="fas fa-atlas"></i><h1>AR</h1></span>
-            <div class="intro">
-
-              <p id="intro_text">Hi, I am Arina, and I am here to help you with all your IT needs.</p>
-            </div>
+      <div class="head ">
+          <span id="open_nav_btn"><i class="fas fa-angle-double-right"></i></span>
+          <div class="intro">
+            <h1>AR</h1>
+            <p id="intro_text">Hi, I am Arina, and I am here to help you with all your IT needs.</p>
           </div>
+      </div>
           
-          <div class="about">
+      <div class="about">
             <div class="left">
               <img src="/pic/dic.jpg" alt="girl that rule this site"> 
-            </div>
-    
+            </div>    
             <div class="right">   
-              <h1>You you yuou!!!fsdfsdf</h1>
-              <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Quibusdam, architecto laudantium! Ducimus, 
-                  esse consequatur. Asperiores numquam facere 
-                  ipsa nobis minus impedit beatae, et laborum 
-                  eaque eum deserunt molestiae enim architecto!
-              </p>
-              <button id="cv_btn" class="btn cv_btn">See CV</button>
+              <h1>Welcome!<br>Who am I?</h1>
+              <p> I am Arina, independent full-stack programmer frome Tallinn.
+                I already accumulated diverse programing experience. 
+                While I continue improving my skills, I still open for work proposals.<br>
+               Your ideas + my effort = great result! If you interested/ check my cv and contact me.</p>
+              <button id="cv_btn" class="btn cv_btn">See CV</button>               
             
             </div>    
-          </div>
-          <div class="row skills">
-            <div id="skills" class="carousel slide col-lg" data-ride="carousel">
+      </div>
 
-              <!-- Indicators -->
+      <div id="skills"class="row skills">
+            <div  class="carousel slide col-lg" data-ride="carousel">
+
               <ul class="carousel-indicators">
                 <li data-target="#skills" data-slide-to="0" class="active"></li>
                 <li data-target="#skills" data-slide-to="1"></li>
@@ -57,29 +60,39 @@
                 <li data-target="#skills" data-slide-to="5"></li>
               </ul>
             
-              <!-- The slideshow -->
               <div class="carousel-inner">
                 <div class="carousel-item active">
+                  <h1>HTML</h1>
                   <img src="./pic/html.png" alt="">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, sed.</p>
                 </div>
                 <div class="carousel-item">
+                    <h1>CSS</h1>
                   <img src="./pic/css.png" alt="">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, sed.</p>
                 </div>
                 <div class="carousel-item">
+                    <h1>Java script</h1>
                   <img src="./pic/js.png" alt="">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, sed.</p>
                 </div>
                 <div class="carousel-item">
+                    <h1>C#</h1>
                   <img src="./pic/csharp.png" alt="">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, sed.</p>
                 </div>
                 <div class="carousel-item">
+                    <h1>PHP</h1>
                   <img src="./pic/php.png" alt="">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, sed.</p>
                 </div>
                 <div class="carousel-item">
+                    <h1>React</h1>
                   <img src="./pic/React.png" alt="">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, sed.</p>
                 </div>
               </div>
-            
-              <!-- Left and right controls -->
+          
               <a class="carousel-control-prev" href="#skills" data-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
               </a>
@@ -90,53 +103,65 @@
             </div>
             
             <div class="skills_right col-lg">
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-  Tenetur similique dolorem eveniet
-   maiores quo molestiae excepturi provident fugit, nam optio nisi 
-  laboriosam, iusto recusandae delectus, distinctio ad. Tempora, quam laboriosam!</p>
+              <p>From the young age 
+              I sought my place in the IT 
+              workfield. On my own and independently, 
+              I was studying 3D modelling, programming 
+              (С#, html, JS, PHP, css), finance/economy. 
+              For the last two years, in my spare time I 
+              was been doing programming and improving 
+              skills in front-end and back-end development. 
+              While studying I got diverse knowledge and 
+              experience in working with various services, 
+              platforms, and frameworks (git, node.js, 
+              different CMS, MySQL, React). At the same time I successfully
+               shared my knowledge with a friend, which helped him start 
+               career in front-end. On the back-end side I made some small 
+               test projects: login, mailing systems, and data management 
+               in MySQL library.</p>
             </div>
+      </div>
+
+      <div id="projects" class="projects">
+              <div class="project_row">
+                <div class="project">
+                  <p>HTML</p>
+                </div>
+                <div class="project">
+                  <p>CSS</p>
+                </div>
+              </div>
+
+            <div class="project_row">              
+              <div class="project">
+                <p>JS</p>
+              </div>
+              <div class="project">
+                <p>PHP</p>
+              </div>
+            </div>
+      </div>
+        
+      <div id="contacts" class="contacts">
+          <div class="mail">
+                <h1>Contact me:</h1>
+                <h2>Shepel1992@mail.ru</h2>
+                <p>t.58298988</p>
           </div>
-    </div>
-
-    <div id="nav" class="nav_main">
-      <p id="close_nav_btn" class="close_btn"><i class="fas fa-angle-double-left"></i></p>
-      <a href="#">About</a>
-      <a href="#">My projects</a>
-      <a href="#">My skills</a>
-      <a href="#">Contact</a>
-    </div>
-    <div class="projects">
-      <div class="project">
-        <p>HTML</p>
+                <h1>Social media:</h1>  
+          <div class="social">
+                <div id="f" class="social_l"><img src="/pic/vk.png"></div>
+                <div id="vk" class="social_l"><img src="/pic/f.png"></div>
+          </div>
       </div>
-      <div class="project">
-        <p>CSS</p>
-      </div>
-      <div class="project">
-        <p>JS</p>
-      </div>
-      <div class="project">
-        <p>PHP</p>
+        
+      <div class="nav_main_bottom">
+            <a href="#">About</a>
+            <a href="#projects">My projects</a>
+            <a href="#skills">My skills</a>
+            <a href="#contacts">Contact</a>
       </div>
     </div>
-
-    <div class="contacts">
-      <div class="mail">
-        <h1>Contact me:</h1>
-        <h2>Shepel1992@mail.ru</h2>
-        <p>t.58298988</p>
-      </div>
-      <h1>Social media:</h1>  
-    <div class="social">
-      <div id="f" class="social_l"><img src="/pic/vk.png"></div>
-      <div id="vk" class="social_l"><img src="/pic/f.png"></div>
-    </div>
-
-  </div>
-
-
-
-
 
     <script src="./js/index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

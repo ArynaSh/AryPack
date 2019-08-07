@@ -1,5 +1,5 @@
 .skills{
-margin: 0px;
+    margin: 0px;
 }
 .carousel{
     width: 100%;
@@ -14,6 +14,7 @@ margin: 0px;
 }
 .carousel-item{
     border: 6px solid lightblue;
+    height: 275px;
 }
 .carousel-item img{
     max-width: 300px;
@@ -22,15 +23,39 @@ margin: 0px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .skills_right{
     padding: 0px;
     margin: 15px;
-    height: 300px;
+    height: 350px;
+}
+.skills_right p{
+    font-size: 0.8em;
+}
+.carousel-item h1{
+    text-align: center;
+    font-size: 1.1em;
+    padding: 0;
+
+}
+.carousel-item p{
+    text-align: center;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+}
+.carousel-indicators{
+    z-index: 1;
 }
 
-@media only screen and (max-width: 500px) {
 
+@media only screen and (max-width: 500px) {
+    .carousel-item img{
+    width: 75px;        
+    }
+    .skills_right{
+
+        height: 500px;
+    }
   }

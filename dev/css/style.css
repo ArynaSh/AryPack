@@ -4,31 +4,19 @@
 @import "projects.css";
 @import "contacts.css";
 body{
+  font-family: 'Press Start 2P', cursive;
   margin: 0;
   padding: 0;
   background-image: linear-gradient(to right, #f7a8b8 , #55cdfc);
+
 }
-.head{
-  background-image: url("../pic/bg.jpg");
-  background-attachment: fixed;
-  height: 800px; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.about{
-  display: flex;
-}
+
+
 .main{
   transition: margin-left .5s;
 }
-#intro_text{
-  font-size: 25px;
-  color: #818181;
-  text-align: center;
-  margin: 0;
-  padding-top: 75px;
-}
+
+
 .btn{
   border: none;
   border-radius: 7px;

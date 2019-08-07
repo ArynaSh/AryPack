@@ -1,9 +1,40 @@
+.head{
+    background-image: url("../pic/bg.jpg");
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    height: 920px; 
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #intro_text{
+    font-size: 45px;
+    text-shadow:
+    -2px -2px 0 #222,  
+     2px -2px 0 #222,
+     -2px 2px 0 #222,
+      2px 2px 0 #222;
+    width: 70%;
+    color: #F7A8B8;
+    text-align: center;
+    margin: 0 15%;
+    padding-top: 275px;
+  }
+
 .about {
     background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
+  }
+.intro h1{
+    font-family: 'Armata', sans-serif;
+    font-weight: 200;
+    padding: 25px;
+    color: #3C90B0;
   }
 .about img{
     display: block;
@@ -22,26 +53,25 @@
 .about .right{
     margin: 10px;
     width: 700px;
-    padding: 90px 10px 5px 10px;
-
-    h1{
-        text-align: center;
-        font-size: 2.4em;
-        color: #3C90B0;
-        font-weight: 1200;
-    }
-    p{
-        font-size: 1.4em;
-        color: #3C90B0;
-    }
-    .cv_btn{
-        background-color: #55cdfc;
-        color: white;
-      }
-    .cv_btn:hover{
+    padding: 30px 10px 30px 10px;
+}
+.about .right h1{
+    text-align: center;
+    font-size: 2.4em;
+    color: #3C90B0;
+    font-weight: 1200;
+}
+.about .right p{
+    font-size: 1em;
+    color: #3C90B0;
+}
+.about .right .cv_btn{
+    background-color: #55cdfc;
+    color: white;
+  }
+.about .right .cv_btn:hover{
         background-color: #3C90B0;
       }
-}
 
 @media only screen and (max-width: 1190px) {
     .about .right{

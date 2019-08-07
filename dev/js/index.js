@@ -14,17 +14,15 @@ function closeNav() {
   document.getElementById("root").style.marginLeft = "0";
   document.getElementById("open_nav_btn").classList.toggle("hidden");
 } 
-function move() {
-
-
-
+function open() { 
+   window.open("/cv.html");
 } 
 
 (function start(){
  // Ar.showhtml(html,"root");
   document.getElementById("open_nav_btn").addEventListener("click", openNav); 
   document.getElementById("close_nav_btn").addEventListener("click", closeNav);
-  document.getElementById("cv_btn").addEventListener("click", move);
+  document.getElementById("cv_btn").addEventListener("click", open);
 })();
 
 
