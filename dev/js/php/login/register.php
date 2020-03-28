@@ -30,7 +30,7 @@ $hash = password_hash($psw, PASSWORD_DEFAULT);
     else {
         $sql = "INSERT INTO users (login, psw) VALUES ($login, $hash)";
         $returnObject->login = $login;
-        $returnObject->errorMessage="User created";
+        $returnObject->errorMessage="User "+$login+" created";
         $myJSON = json_encode($returnObject);
         echo $myJSON;
     }

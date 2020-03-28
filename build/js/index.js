@@ -177,13 +177,14 @@ const AryLyb = {
 __webpack_require__.r(__webpack_exports__);
 var php = {
   login: function (login, psw) {
+    console.log("start");
     var required = new XMLHttpRequest();
     required.open("POST", "/js/php/login/login.php?login=" + login + "&psw=" + psw, true);
     required.send();
 
     required.onreadystatechange = function () {
       if (this.readyState === 4 && this.status === 200) {
-        console.log("Calback send"); //cFunction(this);                         
+        console.log("Calback LOG"); //cFunction(this);                         
       }
     };
   },
@@ -194,7 +195,7 @@ var php = {
 
     required.onreadystatechange = function () {
       if (this.readyState === 4 && this.status === 200) {
-        console.log("Calback send"); //document.getElementById("error").innerHTML = this.responseText;
+        console.log("Calback send r"); //document.getElementById("error").innerHTML = this.responseText;
         //cFunction(this);
       }
     };
