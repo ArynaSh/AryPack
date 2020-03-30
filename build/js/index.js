@@ -92,6 +92,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _libraries_AryJs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _php_actions_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _IO_elements_elements_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+
 
 
 var html_registration = `
@@ -129,12 +131,12 @@ function register() {
 }
 
 function openRegistration() {
-  _libraries_AryJs_js__WEBPACK_IMPORTED_MODULE_0__["default"].showhtml(html_registration, "display_window");
+  _libraries_AryJs_js__WEBPACK_IMPORTED_MODULE_0__["default"].showhtml(_IO_elements_elements_js__WEBPACK_IMPORTED_MODULE_2__["default"].html_registration, "display_window");
   document.getElementById("submit").addEventListener("click", register);
 }
 
 function openlogin() {
-  _libraries_AryJs_js__WEBPACK_IMPORTED_MODULE_0__["default"].showhtml(html_logIn, "display_window");
+  _libraries_AryJs_js__WEBPACK_IMPORTED_MODULE_0__["default"].showhtml(_IO_elements_elements_js__WEBPACK_IMPORTED_MODULE_2__["default"].html_logIn, "display_window");
   document.getElementById("submit").addEventListener("click", login);
 }
 
@@ -209,6 +211,43 @@ var php = {
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (php);
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var IOelements = {
+  html_registration: `
+<h1>Register</h1>
+<div class="form-group">
+  <label for="login">Login:</label>
+  <input type="text" class="form-control" id="login">
+</div>
+<div class="form-group">
+  <label for="pwd">Password:</label>
+  <input type="password" class="form-control" id="psw">
+</div>
+<div class="form-group form-check">
+</div>
+<button id="submit" type="submit" class="btn btn-primary">Register</button>
+`,
+  html_logIn: `<h1>Log In</h1>
+<div class="form-group">
+  <label for="login">Login:</label>
+  <input type="email" class="form-control" id="login">
+</div>
+<div class="form-group">
+  <label for="pwd">Password:</label>
+  <input type="password" class="form-control" id="psw">
+</div>
+<div class="form-group form-check">
+</div>
+<button id="submit" type="submit" class="btn btn-primary">Log In</button>
+`
+};
+/* harmony default export */ __webpack_exports__["default"] = (IOelements);
 
 /***/ })
 /******/ ]);

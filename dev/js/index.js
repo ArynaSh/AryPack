@@ -1,5 +1,6 @@
 import Ar from './libraries/AryJs.js';
 import php from './php/actions.js';
+import IOelements from './IO_elements/elements.js';
 
 var html_registration =`
 <h1>Register</h1>
@@ -36,12 +37,12 @@ var html_logIn =`<h1>Log In</h1>
     php.register(login, psw);    
   }
   function openRegistration (){
-    Ar.showhtml(html_registration, "display_window");
+    Ar.showhtml(IOelements.html_registration, "display_window");
     document.getElementById("submit").addEventListener("click", register);
   }
 
   function openlogin (){
-    Ar.showhtml(html_logIn, "display_window");
+    Ar.showhtml(IOelements.html_logIn, "display_window");
     document.getElementById("submit").addEventListener("click", login);
   }
 
