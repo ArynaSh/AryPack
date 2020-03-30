@@ -135,6 +135,13 @@ function openRegistration() {
 
 function openlogin() {
   _libraries_AryJs_js__WEBPACK_IMPORTED_MODULE_0__["default"].showhtml(html_logIn, "display_window");
+  document.getElementById("submit").addEventListener("click", login);
+}
+
+function login() {
+  var login = document.getElementById("login").value;
+  var psw = document.getElementById("psw").value;
+  _php_actions_js__WEBPACK_IMPORTED_MODULE_1__["default"].login(login, psw);
 }
 
 (function start() {

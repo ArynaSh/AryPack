@@ -42,6 +42,14 @@ var html_logIn =`<h1>Log In</h1>
 
   function openlogin (){
     Ar.showhtml(html_logIn, "display_window");
+    document.getElementById("submit").addEventListener("click", login);
+  }
+
+  
+  function login(){
+    var login = document.getElementById("login").value;
+    var psw = document.getElementById("psw").value;
+    php.login(login, psw);    
   }
 
 (function start(){

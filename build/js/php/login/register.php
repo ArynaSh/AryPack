@@ -28,16 +28,14 @@ $hash = password_hash($psw, PASSWORD_DEFAULT);
         echo $myJSON; 
     }
     else {
-        $sql = "INSERT INTO users (login, psw) VALUES ($login, $hash)";
+        $sql = "INSERT INTO users (login, psw) VALUES ('$login', '$hash')";     
+        $conn->query($sql);
         $returnObject->login = $login;
-        $returnObject->errorMessage="User "+$login+" created";
+        $returnObject->errorMessage = "$login $hash";
         $myJSON = json_encode($returnObject);
-        echo $myJSON;
+        echo $myJSON;    
+        
     }
-
-
-
-
 $conn->close();
 
 ?>

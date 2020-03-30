@@ -1,7 +1,7 @@
 <?php
 require '../conn.php';
-
 $cookie_name = "login";
+
 $returnObject = new \stdClass();
 $returnObject->login = "";
 $returnObject->error = false;
@@ -60,7 +60,6 @@ $hash = password_hash($psw, PASSWORD_DEFAULT);
     }
     else {
         $returnObject->error = true;
-        $returnObject->login = $login;
         $returnObject->errorMessage="No user";
         $myJSON = json_encode($returnObject);
         echo $myJSON;
