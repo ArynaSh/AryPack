@@ -93,36 +93,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _libraries_AryJs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _php_actions_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _IO_elements_elements_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var _IO_elements_main_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
 
 
 
-var html_registration = `
-<h1>Register</h1>
-<div class="form-group">
-  <label for="login">Login:</label>
-  <input type="text" class="form-control" id="login">
-</div>
-<div class="form-group">
-  <label for="pwd">Password:</label>
-  <input type="password" class="form-control" id="psw">
-</div>
-<div class="form-group form-check">
-</div>
-<button id="submit" type="submit" class="btn btn-primary">Register</button>
-`;
-var html_logIn = `<h1>Log In</h1>
-<div class="form-group">
-  <label for="login">Login:</label>
-  <input type="email" class="form-control" id="login">
-</div>
-<div class="form-group">
-  <label for="pwd">Password:</label>
-  <input type="password" class="form-control" id="psw">
-</div>
-<div class="form-group form-check">
-</div>
-<button id="submit" type="submit" class="btn btn-primary">Log In</button>
-`;
+
 
 function register() {
   var login = document.getElementById("login").value;
@@ -146,9 +121,14 @@ function login() {
   _php_actions_js__WEBPACK_IMPORTED_MODULE_1__["default"].login(login, psw);
 }
 
+function tests(x) {
+  console.log("Welcome, " + x);
+}
+
 (function start() {
   document.getElementById("registr_btn").addEventListener("click", openRegistration);
   document.getElementById("login_btn").addEventListener("click", openlogin);
+  _php_actions_js__WEBPACK_IMPORTED_MODULE_1__["default"].cookie(tests);
 })();
 
 /***/ }),
@@ -193,7 +173,26 @@ var php = {
 
     required.onreadystatechange = function () {
       if (this.readyState === 4 && this.status === 200) {
-        console.log("Calback LOG"); //cFunction(this);                         
+        var x = JSON.parse(this.responseText);
+        console.log(x); //cFunction(this);                         
+      }
+    };
+  },
+  cookie: function (cbFunction) {
+    console.log("start");
+    var required = new XMLHttpRequest();
+    required.open("POST", "/js/php/login/login.php?cookie", true);
+    required.send();
+
+    required.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        var x = JSON.parse(this.responseText);
+        console.log(x);
+
+        if (x.error == false) {
+          cbFunction(x.login);
+        } //cFunction(this);                         
+
       }
     };
   },
@@ -248,6 +247,31 @@ var IOelements = {
 `
 };
 /* harmony default export */ __webpack_exports__["default"] = (IOelements);
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var MainUI = {
+  User: 'login',
+  html_main: `
+<h1>Register</h1>
+<div class="form-group">
+  <label for="login">Login:</label>
+  <input type="text" class="form-control" id="login">
+</div>
+<div class="form-group">
+  <label for="pwd">Password:</label>
+  <input type="password" class="form-control" id="psw">
+</div>
+<div class="form-group form-check">
+</div>
+<button id="submit" type="submit" class="btn btn-primary">Register</button>
+`
+};
+/* harmony default export */ __webpack_exports__["default"] = (MainUI);
 
 /***/ })
 /******/ ]);

@@ -9,8 +9,8 @@ $returnObject->errorMessage="0";
 
 if (isset($_REQUEST["cookie"])){
     if (isset($_COOKIE[$cookie_name]) and !$_COOKIE[$cookie_name]=="" ){
-    $returnObject->login = $_COOKIE[$cookie_name];
-    $returnObject->errorMessage="cookie";
+    $returnObject->login = $_COOKIE[$cookie_name]["login"];
+    $returnObject->errorMessage= $_COOKIE[$cookie_name]["id"];;
     $myJSON = json_encode($returnObject);
     echo $myJSON;
     die;
@@ -45,8 +45,10 @@ $hash = password_hash($psw, PASSWORD_DEFAULT);
     if (mysqli_num_rows($result) > 0) {
         $row=mysqli_fetch_array($result,MYSQLI_ASSOC);    
         if (password_verify($psw, $row['psw'])){
-            $cookie_value = $login;
-            setcookie($cookie_name, $cookie_value, time() + (600), "/");
+            $cookie_login = $login;
+            $cookie_id = $result['id'].
+            setcookie($cookie_name['login'], $cookie_login, time() + (600), "/");
+            setcookie($cookie_name['id'], $cookie_id, time() + (600), "/");
             $returnObject->login = $login;
             $myJSON = json_encode($returnObject);
             echo $myJSON;
