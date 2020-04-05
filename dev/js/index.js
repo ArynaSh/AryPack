@@ -17,8 +17,7 @@ import MainUI from './IO_elements/main.js';
     Ar.showhtml(IOelements.html_logIn, "display_window");
     document.getElementById("submit").addEventListener("click", login);
   }
-
-  
+    
   function login(){
     var login = document.getElementById("login").value;
     var psw = document.getElementById("psw").value;
@@ -32,7 +31,7 @@ import MainUI from './IO_elements/main.js';
 (function start(){  
   document.getElementById("registr_btn").addEventListener("click", openRegistration); 
   document.getElementById("login_btn").addEventListener("click", openlogin);
-  php.cookie(tests);
+  php.cookie(goToMainScreen);
  
 })();
 

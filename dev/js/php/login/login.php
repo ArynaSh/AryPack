@@ -9,8 +9,8 @@ $returnObject->errorMessage="0";
 
 if (isset($_REQUEST["cookie"])){
     if (isset($_COOKIE[$cookie_name]) and !$_COOKIE[$cookie_name]=="" ){
-    $returnObject->login = $_COOKIE[$cookie_name]["login"];
-    $returnObject->errorMessage= $_COOKIE[$cookie_name]["id"];;
+    $returnObject->login = $_COOKIE["login"];
+    $returnObject->errorMessage= $_COOKIE["id"];;
     $myJSON = json_encode($returnObject);
     echo $myJSON;
     die;

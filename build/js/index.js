@@ -121,14 +121,12 @@ function login() {
   _php_actions_js__WEBPACK_IMPORTED_MODULE_1__["default"].login(login, psw);
 }
 
-function tests(x) {
-  console.log("Welcome, " + x);
-}
+function goToMainScreen(id, login) {}
 
 (function start() {
   document.getElementById("registr_btn").addEventListener("click", openRegistration);
   document.getElementById("login_btn").addEventListener("click", openlogin);
-  _php_actions_js__WEBPACK_IMPORTED_MODULE_1__["default"].cookie(tests);
+  _php_actions_js__WEBPACK_IMPORTED_MODULE_1__["default"].cookie(goToMainScreen);
 })();
 
 /***/ }),
@@ -165,7 +163,7 @@ const AryLyb = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var php = {
-  login: function (login, psw) {
+  login: function (login, psw, cbFunction) {
     console.log("start");
     var required = new XMLHttpRequest();
     required.open("POST", "/js/php/login/login.php?login=" + login + "&psw=" + psw, true);
@@ -174,7 +172,12 @@ var php = {
     required.onreadystatechange = function () {
       if (this.readyState === 4 && this.status === 200) {
         var x = JSON.parse(this.responseText);
-        console.log(x); //cFunction(this);                         
+        console.log(x);
+
+        if (x.error == false) {
+          cbFunction(x.login, errorMessage);
+        } //cFunction(this);                         
+
       }
     };
   },
@@ -190,7 +193,7 @@ var php = {
         console.log(x);
 
         if (x.error == false) {
-          cbFunction(x.login);
+          cbFunction(x.login, x.errorMessage);
         } //cFunction(this);                         
 
       }

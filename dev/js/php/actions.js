@@ -1,6 +1,6 @@
 var php ={
  
-    login: function(login,psw){    
+    login: function(login,psw,cbFunction){    
         console.log("start");
             var required = new XMLHttpRequest();  
 
@@ -10,6 +10,9 @@ var php ={
                    if (this.readyState === 4 && this.status === 200){
                     var x = JSON.parse(this.responseText);
                                         console.log(x);
+                        if (x.error == false){
+                        cbFunction(x.login, errorMessage);
+                        }  
                     //cFunction(this);                         
                    }
                 };           
@@ -26,7 +29,7 @@ var php ={
                     var x = JSON.parse(this.responseText);
                     console.log(x);
                         if (x.error == false){
-                            cbFunction(x.login);
+                        cbFunction(x.login, x.errorMessage);
                         }                  
                     //cFunction(this);                         
                    }
