@@ -7,7 +7,7 @@ var IOelements ={
   <input type="text" class="form-control" id="login">
 </div>
 <div class="form-group">
-  <label for="pwd">Password:</label>
+  <label for="pwd">Pas:</label>
   <input type="password" class="form-control" id="psw">
 </div>
 <div class="form-group form-check">

@@ -21,11 +21,13 @@ import MainUI from './IO_elements/main.js';
   function login(){
     var login = document.getElementById("login").value;
     var psw = document.getElementById("psw").value;
-    php.login(login, psw);    
+    php.login(login, psw, goToMainScreen);    
   }
 
  function goToMainScreen(id,login){
-    
+  MainUI.User=login;
+  MainUI.id= id;
+  Ar.showhtml(MainUI.html_main, "display_window");
   }
 
 (function start(){  
