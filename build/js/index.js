@@ -121,10 +121,11 @@ function login() {
   _php_actions_js__WEBPACK_IMPORTED_MODULE_1__["default"].login(login, psw, goToMainScreen);
 }
 
-function goToMainScreen(id, login) {
-  _IO_elements_main_js__WEBPACK_IMPORTED_MODULE_3__["default"].User = login;
-  _IO_elements_main_js__WEBPACK_IMPORTED_MODULE_3__["default"].id = id;
-  _libraries_AryJs_js__WEBPACK_IMPORTED_MODULE_0__["default"].showhtml(_IO_elements_main_js__WEBPACK_IMPORTED_MODULE_3__["default"].html_main, "display_window");
+function goToMainScreen(login, id) {
+  _IO_elements_main_js__WEBPACK_IMPORTED_MODULE_3__["default"].set_data(login, id);
+  let x = _IO_elements_main_js__WEBPACK_IMPORTED_MODULE_3__["default"].html_main(login, id);
+  console.log(x);
+  _libraries_AryJs_js__WEBPACK_IMPORTED_MODULE_0__["default"].showhtml(x, "display_window");
 }
 
 (function start() {
@@ -179,7 +180,7 @@ var php = {
         console.log(x);
 
         if (x.error == false) {
-          cbFunction(x.login, errorMessage);
+          cbFunction(x.login, x.errorMessage);
         } //cFunction(this);                         
 
       }
@@ -261,19 +262,27 @@ var IOelements = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-const MainUI = {
-  User: 'login',
-  id: '0',
-  html_main: `
-    <div class="main_menu">
-    <h1>Hi $` + MainUI.User + ` $</h1>
-    <ul class="list-group">
-      <li class="list-group-item">` + id + `</li>
-      <li class="list-group-item">Second item</li>
-      <a href="#" class="list-group-item list-group-item-action">Skills</a>
-    </ul> 
-  </div>
-`
+var user = {
+  login: "Trs",
+  id: 222
+};
+let MainUI = {
+  set_data: function (a, b) {
+    let login = a;
+    let id = b;
+    console.log(user.login);
+  },
+  html_main: function (a, b) {
+    return `<div class="main_menu">
+      <h1>Hi ` + a + " My id: " + b + `</h1>
+      <ul class="list-group">
+        <li class="list-group-item">fff</li>
+        <li class="list-group-item">About</li>
+        <a href="#" class="list-group-item list-group-item-action">Skills</a>
+      </ul> 
+      </div>
+      `;
+  }
 };
 /* harmony default export */ __webpack_exports__["default"] = (MainUI);
 

@@ -11,7 +11,7 @@ var php ={
                     var x = JSON.parse(this.responseText);
                                         console.log(x);
                         if (x.error == false){
-                        cbFunction(x.login, errorMessage);
+                        cbFunction(x.login, x.errorMessage);
                         }  
                     //cFunction(this);                         
                    }

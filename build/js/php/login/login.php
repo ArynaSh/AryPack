@@ -46,10 +46,11 @@ $hash = password_hash($psw, PASSWORD_DEFAULT);
         $row=mysqli_fetch_array($result,MYSQLI_ASSOC);    
         if (password_verify($psw, $row['psw'])){
             $cookie_login = $login;
-            $cookie_id = $result['id'].
-            setcookie($cookie_name['login'], $cookie_login, time() + (600), "/");
-            setcookie($cookie_name['id'], $cookie_id, time() + (600), "/");
+            $cookie_id = $row['id'];
+            setcookie("login", $cookie_login, time() + (600), "/");
+            setcookie("id", $cookie_id, time() + (600), "/");
             $returnObject->login = $login;
+            $returnObject->errorMessage=$cookie_id;
             $myJSON = json_encode($returnObject);
             echo $myJSON;
         }         

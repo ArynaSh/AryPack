@@ -1,7 +1,7 @@
 import Ar from './libraries/AryJs.js';
 import php from './php/actions.js';
 import IOelements from './IO_elements/elements.js';
-import MainUI from './IO_elements/main.js';
+import MainUI  from './IO_elements/main.js';
 
   function register(){
     var login = document.getElementById("login").value;
@@ -24,10 +24,11 @@ import MainUI from './IO_elements/main.js';
     php.login(login, psw, goToMainScreen);    
   }
 
- function goToMainScreen(id,login){
-  MainUI.User=login;
-  MainUI.id= id;
-  Ar.showhtml(MainUI.html_main, "display_window");
+ function goToMainScreen(login,id){
+  MainUI.set_data(login,id);  
+  let x= MainUI.html_main(login,id);
+  console.log(x);
+  Ar.showhtml(x, "display_window");
   }
 
 (function start(){  
