@@ -1,16 +1,16 @@
 {
   "name": "AryPack",
-  "version": "20.10.10",
+  "version": "21.07.22",
   "description": "Starting point",
   "main": "index.js",
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.6.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
-    "babel-loader": "^8.1.0",
-    "browser-sync": "^2.26.14",
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.27.4",
     "del": "^3.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
@@ -21,7 +21,7 @@
     "postcss-import": "^14.0.2",
     "postcss-nested": "^5.0.5",
     "postcss-simple-vars": "^6.0.3",
-    "webpack": "^4.44.2",
+    "webpack": "^5.45.1",
     "webpack-cli": "^3.3.12"
   }
 }
